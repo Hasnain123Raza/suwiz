@@ -1,0 +1,29 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v2
+
+      - name: Install bcunit
+        run: |
+          git clone https://github.com/BelledonneCommunications/bcunit.git
+          cd bcunit
+          ln -s README.md README
+          ./autogen.sh
+          ./configure
+          make
+          sudo make install
+      - name: Prepare build
+        run: mkdir build && cd build && ../configure
+
+      - name: Run test
+        run: LD_LIBRARY_PATH=/usr/local/lib; export LD_LIBRARY_PATH; cd build && make check && make distcheck
