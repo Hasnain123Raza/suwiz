@@ -10,5 +10,5 @@ Suwiz (a play on the words "sudoku" and "wizard") is a project to interact and m
 
 ## Links
 
-Doxygen Documentation: (tba)
-Github Repository: (tba)
+Doxygen Documentation: https://hasnain123raza.github.io/suwiz/
+Github Repository: https://github.com/Hasnain123Raza/suwiz
