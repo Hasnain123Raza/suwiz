@@ -20,15 +20,15 @@
 /**
  * @brief Gets the index of a cell by an index into a row.
  */
-#define SUWIZ_BOARD_INDEX_ROW(row, index)
+#define SUWIZ_BOARD_INDEX_ROW(row, index) 0
 /**
  * @brief Gets the index of a cell by an index into a column.
  */
-#define SUWIZ_BOARD_INDEX_COLUMN(column, index)
+#define SUWIZ_BOARD_INDEX_COLUMN(column, index) 0
 /**
  * @brief Gets the index of a cell by an index into a box.
  */
-#define SUWIZ_BOARD_INDEX_BOX(box, index)
+#define SUWIZ_BOARD_INDEX_BOX(box, index) 0
 
 /**
  * @brief The status of a sudoku board.
