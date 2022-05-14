@@ -136,11 +136,14 @@ void test_suwiz_board_index_box(void) {
 void test_suwiz_board_create(void) {
     int8_t *board = NULL;
 
-    board = suwiz_board_create(NULL);
-    CU_ASSERT_PTR_NULL(board);
-
     board = suwiz_board_create("123456789000...000a...0");
     CU_ASSERT_PTR_NULL(board);
+
+    board = suwiz_board_create(NULL);
+    CU_ASSERT_PTR_NOT_NULL_FATAL(board);
+    CU_ASSERT_EQUAL(board[0], INT8_C(0));
+    CU_ASSERT_EQUAL(board[80], INT8_C(0));
+    suwiz_board_free(board);
 
     board = suwiz_board_create("");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);

@@ -19,8 +19,8 @@
  * representation of the board is a string of 81 characters. The characters
  * represent the values of the board. The characters can be any of the digits
  * 0-9. The characters can also be the character '.' which means the cell is
- * empty. The string can not be NULL but it can be empty. All cells with no
- * string representation are set to 0.
+ * empty. The string can be NULL or empty. All cells with no string 
+ * representation are set to 0.
  * 
  * @param board_str The string representation of the sudoku board.
  * @return int8_t* The new sudoku board.
