@@ -117,7 +117,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a new sudoku board from the string representation. </p>
-<p >A sudoku board is an array of 9x9 8 bit signed integers. The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 0-9. The characters can also be the character '.' which means the cell is empty. The string can not be NULL but it can be empty. All cells with no string representation are set to 0.</p>
+<p >A sudoku board is an array of 9x9 8 bit signed integers. The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 0-9. The characters can also be the character '.' which means the cell is empty. The string can be NULL or empty. All cells with no string representation are set to 0.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">board_str</td><td>The string representation of the sudoku board. </td></tr>
