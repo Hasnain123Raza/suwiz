@@ -76,37 +76,38 @@ $(function() {
 <p>The main header file for suwiz library.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
 </div>
 <p><a href="suwiz_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a57d09af93fdd150ef34f92ebea5409a5"><td class="memItemLeft" align="right" valign="top">int8_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#a57d09af93fdd150ef34f92ebea5409a5">suwiz_board_create</a> (char *board_str)</td></tr>
-<tr class="memdesc:a57d09af93fdd150ef34f92ebea5409a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new sudoku board from the string representation.  <a href="suwiz_8h.html#a57d09af93fdd150ef34f92ebea5409a5">More...</a><br /></td></tr>
-<tr class="separator:a57d09af93fdd150ef34f92ebea5409a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f2db81b89cc31d449878f4267ad8058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#a6f2db81b89cc31d449878f4267ad8058">suwiz_board_free</a> (int8_t **board)</td></tr>
-<tr class="memdesc:a6f2db81b89cc31d449878f4267ad8058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory allocated for the sudoku board.  <a href="suwiz_8h.html#a6f2db81b89cc31d449878f4267ad8058">More...</a><br /></td></tr>
-<tr class="separator:a6f2db81b89cc31d449878f4267ad8058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4c2b36a238dc3ad2233476dd0616e49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#aa4c2b36a238dc3ad2233476dd0616e49">suwiz_board_print</a> (int8_t **board, char **board_str)</td></tr>
-<tr class="memdesc:aa4c2b36a238dc3ad2233476dd0616e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the sudoku board to the given string buffer.  <a href="suwiz_8h.html#aa4c2b36a238dc3ad2233476dd0616e49">More...</a><br /></td></tr>
-<tr class="separator:aa4c2b36a238dc3ad2233476dd0616e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc494f06a838f13579c2fc4c7e78ec4f"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567">SuwizBoardStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#adc494f06a838f13579c2fc4c7e78ec4f">suwiz_board_status</a> (int8_t **board)</td></tr>
-<tr class="memdesc:adc494f06a838f13579c2fc4c7e78ec4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the status of the sudoku board.  <a href="suwiz_8h.html#adc494f06a838f13579c2fc4c7e78ec4f">More...</a><br /></td></tr>
-<tr class="separator:adc494f06a838f13579c2fc4c7e78ec4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2762f8a0420367743d33541ec15315b"><td class="memItemLeft" align="right" valign="top">int8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#aa2762f8a0420367743d33541ec15315b">suwiz_board_create</a> (char *board_str)</td></tr>
+<tr class="memdesc:aa2762f8a0420367743d33541ec15315b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new sudoku board from the string representation.  <a href="suwiz_8h.html#aa2762f8a0420367743d33541ec15315b">More...</a><br /></td></tr>
+<tr class="separator:aa2762f8a0420367743d33541ec15315b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2475ec6444db0c1c10e35c4917374123"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#a2475ec6444db0c1c10e35c4917374123">suwiz_board_free</a> (int8_t *board)</td></tr>
+<tr class="memdesc:a2475ec6444db0c1c10e35c4917374123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory allocated for the sudoku board.  <a href="suwiz_8h.html#a2475ec6444db0c1c10e35c4917374123">More...</a><br /></td></tr>
+<tr class="separator:a2475ec6444db0c1c10e35c4917374123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab072d6647742e18d3f8730e5d8a753a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#aab072d6647742e18d3f8730e5d8a753a">suwiz_board_print</a> (int8_t *board, char *board_str)</td></tr>
+<tr class="memdesc:aab072d6647742e18d3f8730e5d8a753a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the sudoku board to the given string buffer.  <a href="suwiz_8h.html#aab072d6647742e18d3f8730e5d8a753a">More...</a><br /></td></tr>
+<tr class="separator:aab072d6647742e18d3f8730e5d8a753a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09368b730a6fb57fa0fe8d5d2774f7cb"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567">SuwizBoardStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#a09368b730a6fb57fa0fe8d5d2774f7cb">suwiz_board_status</a> (int8_t *board)</td></tr>
+<tr class="memdesc:a09368b730a6fb57fa0fe8d5d2774f7cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the status of the sudoku board.  <a href="suwiz_8h.html#a09368b730a6fb57fa0fe8d5d2774f7cb">More...</a><br /></td></tr>
+<tr class="separator:a09368b730a6fb57fa0fe8d5d2774f7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The main header file for suwiz library. </p>
 <dl class="section author"><dt>Author</dt><dd>Hasnain Raza </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a57d09af93fdd150ef34f92ebea5409a5" name="a57d09af93fdd150ef34f92ebea5409a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57d09af93fdd150ef34f92ebea5409a5">&#9670;&nbsp;</a></span>suwiz_board_create()</h2>
+<a id="aa2762f8a0420367743d33541ec15315b" name="aa2762f8a0420367743d33541ec15315b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2762f8a0420367743d33541ec15315b">&#9670;&nbsp;</a></span>suwiz_board_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t ** suwiz_board_create </td>
+          <td class="memname">int8_t * suwiz_board_create </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>board_str</em></td><td>)</td>
@@ -116,19 +117,19 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a new sudoku board from the string representation. </p>
-<p >A sudoku board is an array of 9x9 8 bit signed integers. The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 0-9. The characters can also be the character '.' which means the cell is empty.</p>
+<p >A sudoku board is an array of 9x9 8 bit signed integers. The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 0-9. The characters can also be the character '.' which means the cell is empty. The string can not be NULL but it can be empty. All cells with no string representation are set to 0.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">board_str</td><td>The string representation of the sudoku board. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int8_t** The new sudoku board. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int8_t* The new sudoku board. </dd></dl>
 
 </div>
 </div>
-<a id="a6f2db81b89cc31d449878f4267ad8058" name="a6f2db81b89cc31d449878f4267ad8058"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f2db81b89cc31d449878f4267ad8058">&#9670;&nbsp;</a></span>suwiz_board_free()</h2>
+<a id="a2475ec6444db0c1c10e35c4917374123" name="a2475ec6444db0c1c10e35c4917374123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2475ec6444db0c1c10e35c4917374123">&#9670;&nbsp;</a></span>suwiz_board_free()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,7 +137,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void suwiz_board_free </td>
           <td>(</td>
-          <td class="paramtype">int8_t **&#160;</td>
+          <td class="paramtype">int8_t *&#160;</td>
           <td class="paramname"><em>board</em></td><td>)</td>
           <td></td>
         </tr>
@@ -153,8 +154,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa4c2b36a238dc3ad2233476dd0616e49" name="aa4c2b36a238dc3ad2233476dd0616e49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4c2b36a238dc3ad2233476dd0616e49">&#9670;&nbsp;</a></span>suwiz_board_print()</h2>
+<a id="aab072d6647742e18d3f8730e5d8a753a" name="aab072d6647742e18d3f8730e5d8a753a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab072d6647742e18d3f8730e5d8a753a">&#9670;&nbsp;</a></span>suwiz_board_print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,13 +163,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void suwiz_board_print </td>
           <td>(</td>
-          <td class="paramtype">int8_t **&#160;</td>
+          <td class="paramtype">int8_t *&#160;</td>
           <td class="paramname"><em>board</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>board_str</em>&#160;</td>
         </tr>
         <tr>
@@ -180,7 +181,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prints the sudoku board to the given string buffer. </p>
-<p >The string buffer must be at least 81 characters long. The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 0-9. The characters can also be the character '.' which means the cell is empty.</p>
+<p >The string buffer must be at least 81 characters long. The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 1-9 or the character '.' which means the cell is empty. The string can not be NULL.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">board</td><td>The sudoku board to be printed. </td></tr>
@@ -191,8 +192,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adc494f06a838f13579c2fc4c7e78ec4f" name="adc494f06a838f13579c2fc4c7e78ec4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc494f06a838f13579c2fc4c7e78ec4f">&#9670;&nbsp;</a></span>suwiz_board_status()</h2>
+<a id="a09368b730a6fb57fa0fe8d5d2774f7cb" name="a09368b730a6fb57fa0fe8d5d2774f7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09368b730a6fb57fa0fe8d5d2774f7cb">&#9670;&nbsp;</a></span>suwiz_board_status()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +201,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">enum <a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567">SuwizBoardStatus</a> suwiz_board_status </td>
           <td>(</td>
-          <td class="paramtype">int8_t **&#160;</td>
+          <td class="paramtype">int8_t *&#160;</td>
           <td class="paramname"><em>board</em></td><td>)</td>
           <td></td>
         </tr>
