@@ -2,6 +2,7 @@
 #define SUWIZ_H
 
 #include <stdint.h>
+#include <stdlib.h>
 #include "common.h"
 
 /**
@@ -18,18 +19,19 @@
  * representation of the board is a string of 81 characters. The characters
  * represent the values of the board. The characters can be any of the digits
  * 0-9. The characters can also be the character '.' which means the cell is
- * empty.
+ * empty. The string can not be NULL but it can be empty. All cells with no
+ * string representation are set to 0.
  * 
  * @param board_str The string representation of the sudoku board.
- * @return int8_t** The new sudoku board.
+ * @return int8_t* The new sudoku board.
  */
-int8_t **suwiz_board_create(char *board_str);
+int8_t *suwiz_board_create(char *board_str);
 /**
  * @brief Frees the memory allocated for the sudoku board.
  * 
  * @param board The sudoku board to be freed.
  */
-void suwiz_board_free(int8_t **board);
+void suwiz_board_free(int8_t *board);
 
 /**
  * @brief Prints the sudoku board to the given string buffer.
@@ -37,13 +39,13 @@ void suwiz_board_free(int8_t **board);
  * @details The string buffer must be at least 81 characters long.
  * The string representation of the board is a string of 81 characters. The
  * characters represent the values of the board. The characters can be any of
- * the digits 0-9. The characters can also be the character '.' which means the
- * cell is empty.
+ * the digits 1-9 or the character '.' which means the cell is empty. The
+ * string can not be NULL.
  * 
  * @param board The sudoku board to be printed.
  * @param board_str The string buffer to which the board is printed.
  */
-void suwiz_board_print(int8_t **board, char **board_str);
+void suwiz_board_print(int8_t *board, char *board_str);
 /**
  * @brief Determines the status of the sudoku board.
  * 
@@ -55,6 +57,6 @@ void suwiz_board_print(int8_t **board, char **board_str);
  * @param board The sudoku board to be checked.
  * @return enum SuwizBoardStatus The status of the board.
  */
-enum SuwizBoardStatus suwiz_board_status(int8_t **board);
+enum SuwizBoardStatus suwiz_board_status(int8_t *board);
 
 #endif

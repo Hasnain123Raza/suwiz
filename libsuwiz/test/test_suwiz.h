@@ -1,6 +1,10 @@
 #ifndef TEST_SUWIZ_H
 #define TEST_SUWIZ_H
 
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <BCUnit/BCUnit.h>
 #include <BCUnit/Basic.h>
 #include "suwiz.h"
