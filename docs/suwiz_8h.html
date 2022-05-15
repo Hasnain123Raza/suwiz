@@ -77,6 +77,7 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
 </div>
 <p><a href="suwiz_8h_source.html">Go to the source code of this file.</a></p>
@@ -181,7 +182,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prints the sudoku board to the given string buffer. </p>
-<p >The string buffer must be at least 81 characters long. The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 1-9 or the character '.' which means the cell is empty. The string can not be NULL.</p>
+<p >The string buffer must be at least 82 characters long (to allow null character). The string representation of the board is a string of 81 characters. The characters represent the values of the board. The characters can be any of the digits 1-9 or the character '.' which means the cell is empty. The string can not be NULL.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">board</td><td>The sudoku board to be printed. </td></tr>
