@@ -28,9 +28,12 @@ check_PROGRAMS = test/driver
 test_driver_SOURCES = \
     libsuwiz/test/driver.c \
     libsuwiz/test/test_suwiz.h \
-    libsuwiz/test/test_suwiz.c
+    libsuwiz/test/test_suwiz.c \
+    libsuwiz/test/test_constraints.h \
+    libsuwiz/test/test_constraints.c
 test_driver_CPPFLAGS = \
     -I$(top_srcdir)/libsuwiz/include \
+    -I$(top_srcdir)/libsuwiz/src \
     -I$(top_srcdir)/libsuwiz/test
 test_driver_LDADD = libsuwiz.a -lbcunit
 

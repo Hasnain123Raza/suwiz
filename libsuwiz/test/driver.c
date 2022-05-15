@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <BCUnit/BCUnit.h>
 #include <BCUnit/Basic.h>
-
+#include "test_constraints.h"
 #include "test_suwiz.h"
 
 int main(void) {
@@ -14,7 +14,8 @@ int main(void) {
         return CU_get_error();
     }
 
-    if (prepare_suite_suwiz() != CUE_SUCCESS) {
+    if ((prepare_suite_suwiz() != CUE_SUCCESS) ||
+        (prepare_suite_constraints() != CUE_SUCCESS)) {
         return CU_get_error();
     }
 
