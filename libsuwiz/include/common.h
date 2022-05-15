@@ -33,4 +33,20 @@
 #define SUWIZ_BOARD_INDEX_BOX(box, index) \
     (((box) / 3) * 27 + ((box) % 3) * 3 + ((index) / 3) * SUWIZ_BOARD_ROW_SIZE + ((index) % 3))
 
+/**
+ * @brief Gets the row corresponding to an index into a sudoku board.
+ */
+#define SUWIZ_BOARD_INDEX_TO_ROW(index) \
+    ((index) / SUWIZ_BOARD_ROW_SIZE)
+/**
+ * @brief Gets the column corresponding to an index into a sudoku board.
+ */
+#define SUWIZ_BOARD_INDEX_TO_COLUMN(index) \
+    ((index) % SUWIZ_BOARD_ROW_SIZE)
+/**
+ * @brief Gets the box corresponding to an index into a sudoku board.
+ */
+#define SUWIZ_BOARD_INDEX_TO_BOX(index) \
+    (((index) / SUWIZ_BOARD_ROW_SIZE) / 3 * 3 + ((index) % SUWIZ_BOARD_ROW_SIZE) / 3)
+
 #endif

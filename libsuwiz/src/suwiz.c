@@ -84,9 +84,9 @@ enum SuwizBoardStatus suwiz_board_status(int8_t *board) {
         }
 
         int value_index = value - 1;
-        int row = counter / 9;
-        int column = counter % 9;
-        int box = (row / 3) * 3 + (column / 3);
+        int row = SUWIZ_BOARD_INDEX_TO_ROW(counter);
+        int column = SUWIZ_BOARD_INDEX_TO_COLUMN(counter);
+        int box = SUWIZ_BOARD_INDEX_TO_BOX(counter);
 
         if (GET_ROW_FLAG(unqiue_value_flags[row][value_index])) {
             return SUWIZ_BOARD_STATUS_INVALID;
