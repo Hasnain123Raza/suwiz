@@ -14,11 +14,15 @@ CU_ErrorCode prepare_suite_constraints(void) {
         return CU_get_error();
     }
 
-    if ((CU_add_test(suite_constraints, "test_suwiz_constraints_create", test_suwiz_constraints_create) == NULL) ||
-        (CU_add_test(suite_constraints, "test_suwiz_constraints_free", test_suwiz_constraints_free) == NULL) ||
-        (CU_add_test(suite_constraints, "test_suwiz_constraints_status", test_suwiz_constraints_status) == NULL) ||
-        (CU_add_test(suite_constraints, "test_suwiz_constraints_solve", test_suwiz_constraints_solve) == NULL) ||
-        (CU_add_test(suite_constraints, "test_suwiz_constraints_unsolve", test_suwiz_constraints_unsolve) == NULL)) {
+    if ((CU_add_test(suite_constraints, "suwiz_constraints_is_value", test_suwiz_constraints_is_value) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_add_choice", test_suwiz_constraints_add_choice) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_remove_choice", test_suwiz_constraints_remove_choice) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_has_choice", test_suwiz_constraints_has_choice) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_create", test_suwiz_constraints_create) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_free", test_suwiz_constraints_free) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_status", test_suwiz_constraints_status) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_solve", test_suwiz_constraints_solve) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_unsolve", test_suwiz_constraints_unsolve) == NULL)) {
         return CU_get_error();
     }
 
@@ -26,6 +30,22 @@ CU_ErrorCode prepare_suite_constraints(void) {
 }
 
 
+
+void test_suwiz_constraints_is_value(void) {
+
+}
+
+void test_suwiz_constraints_add_choice(void) {
+
+}
+
+void test_suwiz_constraints_remove_choice(void) {
+
+}
+
+void test_suwiz_constraints_has_choice(void) {
+
+}
 
 void test_suwiz_constraints_create(void) {
 
