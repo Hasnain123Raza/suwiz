@@ -14,6 +14,15 @@
  */
 
 /**
+ * @brief The status of a sudoku board.
+ */
+enum SuwizBoardStatus {
+    SUWIZ_BOARD_STATUS_INVALID, /**< The board is invalid. */
+    SUWIZ_BOARD_STATUS_SOLVED, /**< The board is solved. */
+    SUWIZ_BOARD_STATUS_UNSOLVED /**< The board is unsolved. */
+};
+
+/**
  * @brief Creates a new sudoku board from the string representation.
  * 
  * @details A sudoku board is an array of 9x9 8 bit signed integers. The string

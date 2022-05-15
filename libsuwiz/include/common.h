@@ -31,15 +31,6 @@
  * @brief Gets the index of a cell by an index into a box.
  */
 #define SUWIZ_BOARD_INDEX_BOX(box, index) \
-    (((box) / 3) * 27 + ((box) % 3) * 3 + (index / 3) * SUWIZ_BOARD_ROW_SIZE + (index % 3))
-
-/**
- * @brief The status of a sudoku board.
- */
-enum SuwizBoardStatus {
-    SUWIZ_BOARD_STATUS_INVALID, /**< The board is invalid. */
-    SUWIZ_BOARD_STATUS_SOLVED, /**< The board is solved. */
-    SUWIZ_BOARD_STATUS_UNSOLVED /**< The board is unsolved. */
-};
+    (((box) / 3) * 27 + ((box) % 3) * 3 + ((index) / 3) * SUWIZ_BOARD_ROW_SIZE + ((index) % 3))
 
 #endif

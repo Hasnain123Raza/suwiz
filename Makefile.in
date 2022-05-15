@@ -143,7 +143,9 @@ am__v_AR_1 =
 libsuwiz_a_AR = $(AR) $(ARFLAGS)
 libsuwiz_a_LIBADD =
 am__dirstamp = $(am__leading_dot)dirstamp
-am_libsuwiz_a_OBJECTS = libsuwiz/src/a-suwiz.$(OBJEXT)
+am_libsuwiz_a_OBJECTS = libsuwiz/src/a-suwiz.$(OBJEXT) \
+	libsuwiz/src/a-solve.$(OBJEXT) \
+	libsuwiz/src/a-constraints.$(OBJEXT)
 libsuwiz_a_OBJECTS = $(am_libsuwiz_a_OBJECTS)
 am_suwiz_OBJECTS = suwiz-cli/src/suwiz-main.$(OBJEXT) \
 	suwiz-cli/src/suwiz-argp.$(OBJEXT)
@@ -168,7 +170,9 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = libsuwiz/src/$(DEPDIR)/a-suwiz.Po \
+am__depfiles_remade = libsuwiz/src/$(DEPDIR)/a-constraints.Po \
+	libsuwiz/src/$(DEPDIR)/a-solve.Po \
+	libsuwiz/src/$(DEPDIR)/a-suwiz.Po \
 	libsuwiz/test/$(DEPDIR)/test_driver-driver.Po \
 	libsuwiz/test/$(DEPDIR)/test_driver-test_suwiz.Po \
 	suwiz-cli/src/$(DEPDIR)/suwiz-argp.Po \
@@ -519,10 +523,15 @@ include_HEADERS = \
 
 lib_LIBRARIES = libsuwiz.a
 libsuwiz_a_SOURCES = \
-    libsuwiz/src/suwiz.c
+    libsuwiz/src/suwiz.c \
+    libsuwiz/src/solve.h \
+    libsuwiz/src/solve.c \
+    libsuwiz/src/constraints.h \
+    libsuwiz/src/constraints.c
 
 libsuwiz_a_CPPFLAGS = \
-    -I$(top_srcdir)/libsuwiz/include
+    -I$(top_srcdir)/libsuwiz/include \
+    -I$(top_srcdir)/libsuwiz/src
 
 suwiz_SOURCES = \
     suwiz-cli/src/main.c \
@@ -683,6 +692,10 @@ libsuwiz/src/$(DEPDIR)/$(am__dirstamp):
 	@: > libsuwiz/src/$(DEPDIR)/$(am__dirstamp)
 libsuwiz/src/a-suwiz.$(OBJEXT): libsuwiz/src/$(am__dirstamp) \
 	libsuwiz/src/$(DEPDIR)/$(am__dirstamp)
+libsuwiz/src/a-solve.$(OBJEXT): libsuwiz/src/$(am__dirstamp) \
+	libsuwiz/src/$(DEPDIR)/$(am__dirstamp)
+libsuwiz/src/a-constraints.$(OBJEXT): libsuwiz/src/$(am__dirstamp) \
+	libsuwiz/src/$(DEPDIR)/$(am__dirstamp)
 
 libsuwiz.a: $(libsuwiz_a_OBJECTS) $(libsuwiz_a_DEPENDENCIES) $(EXTRA_libsuwiz_a_DEPENDENCIES) 
 	$(AM_V_at)-rm -f libsuwiz.a
@@ -731,6 +744,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@libsuwiz/src/$(DEPDIR)/a-constraints.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libsuwiz/src/$(DEPDIR)/a-solve.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsuwiz/src/$(DEPDIR)/a-suwiz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsuwiz/test/$(DEPDIR)/test_driver-driver.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libsuwiz/test/$(DEPDIR)/test_driver-test_suwiz.Po@am__quote@ # am--include-marker
@@ -772,6 +787,34 @@ libsuwiz/src/a-suwiz.obj: libsuwiz/src/suwiz.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsuwiz/src/suwiz.c' object='libsuwiz/src/a-suwiz.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsuwiz/src/a-suwiz.obj `if test -f 'libsuwiz/src/suwiz.c'; then $(CYGPATH_W) 'libsuwiz/src/suwiz.c'; else $(CYGPATH_W) '$(srcdir)/libsuwiz/src/suwiz.c'; fi`
+
+libsuwiz/src/a-solve.o: libsuwiz/src/solve.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsuwiz/src/a-solve.o -MD -MP -MF libsuwiz/src/$(DEPDIR)/a-solve.Tpo -c -o libsuwiz/src/a-solve.o `test -f 'libsuwiz/src/solve.c' || echo '$(srcdir)/'`libsuwiz/src/solve.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsuwiz/src/$(DEPDIR)/a-solve.Tpo libsuwiz/src/$(DEPDIR)/a-solve.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsuwiz/src/solve.c' object='libsuwiz/src/a-solve.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsuwiz/src/a-solve.o `test -f 'libsuwiz/src/solve.c' || echo '$(srcdir)/'`libsuwiz/src/solve.c
+
+libsuwiz/src/a-solve.obj: libsuwiz/src/solve.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsuwiz/src/a-solve.obj -MD -MP -MF libsuwiz/src/$(DEPDIR)/a-solve.Tpo -c -o libsuwiz/src/a-solve.obj `if test -f 'libsuwiz/src/solve.c'; then $(CYGPATH_W) 'libsuwiz/src/solve.c'; else $(CYGPATH_W) '$(srcdir)/libsuwiz/src/solve.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsuwiz/src/$(DEPDIR)/a-solve.Tpo libsuwiz/src/$(DEPDIR)/a-solve.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsuwiz/src/solve.c' object='libsuwiz/src/a-solve.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsuwiz/src/a-solve.obj `if test -f 'libsuwiz/src/solve.c'; then $(CYGPATH_W) 'libsuwiz/src/solve.c'; else $(CYGPATH_W) '$(srcdir)/libsuwiz/src/solve.c'; fi`
+
+libsuwiz/src/a-constraints.o: libsuwiz/src/constraints.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsuwiz/src/a-constraints.o -MD -MP -MF libsuwiz/src/$(DEPDIR)/a-constraints.Tpo -c -o libsuwiz/src/a-constraints.o `test -f 'libsuwiz/src/constraints.c' || echo '$(srcdir)/'`libsuwiz/src/constraints.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsuwiz/src/$(DEPDIR)/a-constraints.Tpo libsuwiz/src/$(DEPDIR)/a-constraints.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsuwiz/src/constraints.c' object='libsuwiz/src/a-constraints.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsuwiz/src/a-constraints.o `test -f 'libsuwiz/src/constraints.c' || echo '$(srcdir)/'`libsuwiz/src/constraints.c
+
+libsuwiz/src/a-constraints.obj: libsuwiz/src/constraints.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libsuwiz/src/a-constraints.obj -MD -MP -MF libsuwiz/src/$(DEPDIR)/a-constraints.Tpo -c -o libsuwiz/src/a-constraints.obj `if test -f 'libsuwiz/src/constraints.c'; then $(CYGPATH_W) 'libsuwiz/src/constraints.c'; else $(CYGPATH_W) '$(srcdir)/libsuwiz/src/constraints.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libsuwiz/src/$(DEPDIR)/a-constraints.Tpo libsuwiz/src/$(DEPDIR)/a-constraints.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libsuwiz/src/constraints.c' object='libsuwiz/src/a-constraints.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libsuwiz_a_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libsuwiz/src/a-constraints.obj `if test -f 'libsuwiz/src/constraints.c'; then $(CYGPATH_W) 'libsuwiz/src/constraints.c'; else $(CYGPATH_W) '$(srcdir)/libsuwiz/src/constraints.c'; fi`
 
 suwiz-cli/src/suwiz-main.o: suwiz-cli/src/main.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(suwiz_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT suwiz-cli/src/suwiz-main.o -MD -MP -MF suwiz-cli/src/$(DEPDIR)/suwiz-main.Tpo -c -o suwiz-cli/src/suwiz-main.o `test -f 'suwiz-cli/src/main.c' || echo '$(srcdir)/'`suwiz-cli/src/main.c
@@ -1299,7 +1342,9 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-		-rm -f libsuwiz/src/$(DEPDIR)/a-suwiz.Po
+		-rm -f libsuwiz/src/$(DEPDIR)/a-constraints.Po
+	-rm -f libsuwiz/src/$(DEPDIR)/a-solve.Po
+	-rm -f libsuwiz/src/$(DEPDIR)/a-suwiz.Po
 	-rm -f libsuwiz/test/$(DEPDIR)/test_driver-driver.Po
 	-rm -f libsuwiz/test/$(DEPDIR)/test_driver-test_suwiz.Po
 	-rm -f suwiz-cli/src/$(DEPDIR)/suwiz-argp.Po
@@ -1351,7 +1396,9 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-		-rm -f libsuwiz/src/$(DEPDIR)/a-suwiz.Po
+		-rm -f libsuwiz/src/$(DEPDIR)/a-constraints.Po
+	-rm -f libsuwiz/src/$(DEPDIR)/a-solve.Po
+	-rm -f libsuwiz/src/$(DEPDIR)/a-suwiz.Po
 	-rm -f libsuwiz/test/$(DEPDIR)/test_driver-driver.Po
 	-rm -f libsuwiz/test/$(DEPDIR)/test_driver-test_suwiz.Po
 	-rm -f suwiz-cli/src/$(DEPDIR)/suwiz-argp.Po

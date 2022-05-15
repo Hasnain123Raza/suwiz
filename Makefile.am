@@ -4,9 +4,14 @@ include_HEADERS = \
 
 lib_LIBRARIES = libsuwiz.a
 libsuwiz_a_SOURCES = \
-    libsuwiz/src/suwiz.c
+    libsuwiz/src/suwiz.c \
+    libsuwiz/src/solve.h \
+    libsuwiz/src/solve.c \
+    libsuwiz/src/constraints.h \
+    libsuwiz/src/constraints.c
 libsuwiz_a_CPPFLAGS = \
-    -I$(top_srcdir)/libsuwiz/include
+    -I$(top_srcdir)/libsuwiz/include \
+    -I$(top_srcdir)/libsuwiz/src
 
 bin_PROGRAMS = suwiz
 suwiz_SOURCES = \
