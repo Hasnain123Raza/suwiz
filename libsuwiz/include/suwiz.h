@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
 #include "common.h"
 
 /**
@@ -36,11 +37,11 @@ void suwiz_board_free(int8_t *board);
 /**
  * @brief Prints the sudoku board to the given string buffer.
  * 
- * @details The string buffer must be at least 81 characters long.
- * The string representation of the board is a string of 81 characters. The
- * characters represent the values of the board. The characters can be any of
- * the digits 1-9 or the character '.' which means the cell is empty. The
- * string can not be NULL.
+ * @details The string buffer must be at least 82 characters long (to allow null
+ * character). The string representation of the board is a string of 81 characters.
+ * The characters represent the values of the board. The characters can be any of
+ * the digits 1-9 or the character '.' which means the cell is empty. The string
+ * can not be NULL.
  * 
  * @param board The sudoku board to be printed.
  * @param board_str The string buffer to which the board is printed.
