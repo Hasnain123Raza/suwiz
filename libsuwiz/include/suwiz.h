@@ -68,5 +68,18 @@ void suwiz_board_print(int8_t *board, char *board_str);
  * @return enum SuwizBoardStatus The status of the board.
  */
 enum SuwizBoardStatus suwiz_board_status(int8_t *board);
+/**
+ * @brief Solves the sudoku board.
+ * 
+ * @details The returned solutions are stored in an array that needs to be freed
+ * by the caller along with the individual solutions. The solutions are completed
+ * sudoku boards.
+ * 
+ * @param board The sudoku board to be solved.
+ * @param max_solutions The maximum number of solutions to be returned.
+ * @param solutions_found The number of solutions found.
+ * @return int8_t** The solutions found.
+ */
+int8_t **suwiz_board_solve(int8_t *board, int max_solutions, int *solutions_found);
 
 #endif
