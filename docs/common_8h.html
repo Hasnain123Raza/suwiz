@@ -68,8 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle"><div class="title">common.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -101,18 +100,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a3e0f47a1b9f341886971b6e21a3f89e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a3e0f47a1b9f341886971b6e21a3f89e7">SUWIZ_BOARD_INDEX_COLUMN</a>(column,  index)&#160;&#160;&#160;    ((index) * <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a> + (column))</td></tr>
 <tr class="memdesc:a3e0f47a1b9f341886971b6e21a3f89e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a cell by an index into a column.  <a href="common_8h.html#a3e0f47a1b9f341886971b6e21a3f89e7">More...</a><br /></td></tr>
 <tr class="separator:a3e0f47a1b9f341886971b6e21a3f89e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47fdea00b9e91996943afa3ca39c1a4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a47fdea00b9e91996943afa3ca39c1a4d">SUWIZ_BOARD_INDEX_BOX</a>(box,  index)&#160;&#160;&#160;    (((box) / 3) * 27 + ((box) % 3) * 3 + (index / 3) * <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a> + (index % 3))</td></tr>
+<tr class="memitem:a47fdea00b9e91996943afa3ca39c1a4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a47fdea00b9e91996943afa3ca39c1a4d">SUWIZ_BOARD_INDEX_BOX</a>(box,  index)&#160;&#160;&#160;    (((box) / 3) * 27 + ((box) % 3) * 3 + ((index) / 3) * <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a> + ((index) % 3))</td></tr>
 <tr class="memdesc:a47fdea00b9e91996943afa3ca39c1a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a cell by an index into a box.  <a href="common_8h.html#a47fdea00b9e91996943afa3ca39c1a4d">More...</a><br /></td></tr>
 <tr class="separator:a47fdea00b9e91996943afa3ca39c1a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a2983cafa064041245ede4ad9ce32d567"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567">SuwizBoardStatus</a> { <a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567a86e5ca4eb1c2c5eda489315a0a1a1aad">SUWIZ_BOARD_STATUS_INVALID</a>
-, <a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567a1d299469c4a456a7ffd17a82419381d5">SUWIZ_BOARD_STATUS_SOLVED</a>
-, <a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567a96e4c54808d579802b18addb6b51b56e">SUWIZ_BOARD_STATUS_UNSOLVED</a>
- }</td></tr>
-<tr class="memdesc:a2983cafa064041245ede4ad9ce32d567"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of a sudoku board.  <a href="common_8h.html#a2983cafa064041245ede4ad9ce32d567">More...</a><br /></td></tr>
-<tr class="separator:a2983cafa064041245ede4ad9ce32d567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Contains common definitions and macros. </p>
@@ -199,7 +189,7 @@ Enumerations</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    (((box) / 3) * 27 + ((box) % 3) * 3 + (index / 3) * <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a> + (index % 3))</td>
+          <td></td><td>&#160;&#160;&#160;    (((box) / 3) * 27 + ((box) % 3) * 3 + ((index) / 3) * <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a> + ((index) % 3))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -310,31 +300,6 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >The number of cells in a sudoku board. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a2983cafa064041245ede4ad9ce32d567" name="a2983cafa064041245ede4ad9ce32d567"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2983cafa064041245ede4ad9ce32d567">&#9670;&nbsp;</a></span>SuwizBoardStatus</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="common_8h.html#a2983cafa064041245ede4ad9ce32d567">SuwizBoardStatus</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The status of a sudoku board. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2983cafa064041245ede4ad9ce32d567a86e5ca4eb1c2c5eda489315a0a1a1aad" name="a2983cafa064041245ede4ad9ce32d567a86e5ca4eb1c2c5eda489315a0a1a1aad"></a>SUWIZ_BOARD_STATUS_INVALID&#160;</td><td class="fielddoc"><p >The board is invalid. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a2983cafa064041245ede4ad9ce32d567a1d299469c4a456a7ffd17a82419381d5" name="a2983cafa064041245ede4ad9ce32d567a1d299469c4a456a7ffd17a82419381d5"></a>SUWIZ_BOARD_STATUS_SOLVED&#160;</td><td class="fielddoc"><p >The board is solved. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a2983cafa064041245ede4ad9ce32d567a96e4c54808d579802b18addb6b51b56e" name="a2983cafa064041245ede4ad9ce32d567a96e4c54808d579802b18addb6b51b56e"></a>SUWIZ_BOARD_STATUS_UNSOLVED&#160;</td><td class="fielddoc"><p >The board is unsolved. </p>
-</td></tr>
-</table>
 
 </div>
 </div>

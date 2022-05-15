@@ -16,8 +16,8 @@ var searchData=
   ['suwiz_5fboard_5frows_13',['SUWIZ_BOARD_ROWS',['../common_8h.html#a464814832880b3dce54340e2f2c30533',1,'common.h']]],
   ['suwiz_5fboard_5fsize_14',['SUWIZ_BOARD_SIZE',['../common_8h.html#a68fa26d66f9fa1810c3f3e53041bf3ff',1,'common.h']]],
   ['suwiz_5fboard_5fstatus_15',['suwiz_board_status',['../suwiz_8h.html#a09368b730a6fb57fa0fe8d5d2774f7cb',1,'suwiz.h']]],
-  ['suwiz_5fboard_5fstatus_5finvalid_16',['SUWIZ_BOARD_STATUS_INVALID',['../common_8h.html#a2983cafa064041245ede4ad9ce32d567a86e5ca4eb1c2c5eda489315a0a1a1aad',1,'common.h']]],
-  ['suwiz_5fboard_5fstatus_5fsolved_17',['SUWIZ_BOARD_STATUS_SOLVED',['../common_8h.html#a2983cafa064041245ede4ad9ce32d567a1d299469c4a456a7ffd17a82419381d5',1,'common.h']]],
-  ['suwiz_5fboard_5fstatus_5funsolved_18',['SUWIZ_BOARD_STATUS_UNSOLVED',['../common_8h.html#a2983cafa064041245ede4ad9ce32d567a96e4c54808d579802b18addb6b51b56e',1,'common.h']]],
-  ['suwizboardstatus_19',['SuwizBoardStatus',['../common_8h.html#a2983cafa064041245ede4ad9ce32d567',1,'common.h']]]
+  ['suwiz_5fboard_5fstatus_5finvalid_16',['SUWIZ_BOARD_STATUS_INVALID',['../suwiz_8h.html#a2983cafa064041245ede4ad9ce32d567a86e5ca4eb1c2c5eda489315a0a1a1aad',1,'suwiz.h']]],
+  ['suwiz_5fboard_5fstatus_5fsolved_17',['SUWIZ_BOARD_STATUS_SOLVED',['../suwiz_8h.html#a2983cafa064041245ede4ad9ce32d567a1d299469c4a456a7ffd17a82419381d5',1,'suwiz.h']]],
+  ['suwiz_5fboard_5fstatus_5funsolved_18',['SUWIZ_BOARD_STATUS_UNSOLVED',['../suwiz_8h.html#a2983cafa064041245ede4ad9ce32d567a96e4c54808d579802b18addb6b51b56e',1,'suwiz.h']]],
+  ['suwizboardstatus_19',['SuwizBoardStatus',['../suwiz_8h.html#a2983cafa064041245ede4ad9ce32d567',1,'suwiz.h']]]
 ];
