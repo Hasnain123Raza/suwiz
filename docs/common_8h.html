@@ -103,6 +103,15 @@ Macros</h2></td></tr>
 <tr class="memitem:a47fdea00b9e91996943afa3ca39c1a4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a47fdea00b9e91996943afa3ca39c1a4d">SUWIZ_BOARD_INDEX_BOX</a>(box,  index)&#160;&#160;&#160;    (((box) / 3) * 27 + ((box) % 3) * 3 + ((index) / 3) * <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a> + ((index) % 3))</td></tr>
 <tr class="memdesc:a47fdea00b9e91996943afa3ca39c1a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index of a cell by an index into a box.  <a href="common_8h.html#a47fdea00b9e91996943afa3ca39c1a4d">More...</a><br /></td></tr>
 <tr class="separator:a47fdea00b9e91996943afa3ca39c1a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500f99e17bef6d0b3e796c5e02454715"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a500f99e17bef6d0b3e796c5e02454715">SUWIZ_BOARD_INDEX_TO_ROW</a>(index)&#160;&#160;&#160;    ((index) / <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>)</td></tr>
+<tr class="memdesc:a500f99e17bef6d0b3e796c5e02454715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the row corresponding to an index into a sudoku board.  <a href="common_8h.html#a500f99e17bef6d0b3e796c5e02454715">More...</a><br /></td></tr>
+<tr class="separator:a500f99e17bef6d0b3e796c5e02454715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c491870ba8ec0e86f040de365d381a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#a5c491870ba8ec0e86f040de365d381a5">SUWIZ_BOARD_INDEX_TO_COLUMN</a>(index)&#160;&#160;&#160;    ((index) % <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>)</td></tr>
+<tr class="memdesc:a5c491870ba8ec0e86f040de365d381a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the column corresponding to an index into a sudoku board.  <a href="common_8h.html#a5c491870ba8ec0e86f040de365d381a5">More...</a><br /></td></tr>
+<tr class="separator:a5c491870ba8ec0e86f040de365d381a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f06c10dea9ad3d73681692f6d677c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8h.html#aa8f06c10dea9ad3d73681692f6d677c6">SUWIZ_BOARD_INDEX_TO_BOX</a>(index)&#160;&#160;&#160;    (((index) / <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>) / 3 * 3 + ((index) % <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>) / 3)</td></tr>
+<tr class="memdesc:aa8f06c10dea9ad3d73681692f6d677c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the box corresponding to an index into a sudoku board.  <a href="common_8h.html#aa8f06c10dea9ad3d73681692f6d677c6">More...</a><br /></td></tr>
+<tr class="separator:aa8f06c10dea9ad3d73681692f6d677c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Contains common definitions and macros. </p>
@@ -255,6 +264,66 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the index of a cell by an index into a row. </p>
+
+</div>
+</div>
+<a id="aa8f06c10dea9ad3d73681692f6d677c6" name="aa8f06c10dea9ad3d73681692f6d677c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f06c10dea9ad3d73681692f6d677c6">&#9670;&nbsp;</a></span>SUWIZ_BOARD_INDEX_TO_BOX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SUWIZ_BOARD_INDEX_TO_BOX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td>&#160;&#160;&#160;    (((index) / <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>) / 3 * 3 + ((index) % <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>) / 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the box corresponding to an index into a sudoku board. </p>
+
+</div>
+</div>
+<a id="a5c491870ba8ec0e86f040de365d381a5" name="a5c491870ba8ec0e86f040de365d381a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c491870ba8ec0e86f040de365d381a5">&#9670;&nbsp;</a></span>SUWIZ_BOARD_INDEX_TO_COLUMN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SUWIZ_BOARD_INDEX_TO_COLUMN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td>&#160;&#160;&#160;    ((index) % <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the column corresponding to an index into a sudoku board. </p>
+
+</div>
+</div>
+<a id="a500f99e17bef6d0b3e796c5e02454715" name="a500f99e17bef6d0b3e796c5e02454715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500f99e17bef6d0b3e796c5e02454715">&#9670;&nbsp;</a></span>SUWIZ_BOARD_INDEX_TO_ROW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SUWIZ_BOARD_INDEX_TO_ROW</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td>&#160;&#160;&#160;    ((index) / <a class="el" href="common_8h.html#a28d766248bd257e453731165566e9aa7">SUWIZ_BOARD_ROW_SIZE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the row corresponding to an index into a sudoku board. </p>
 
 </div>
 </div>

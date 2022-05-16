@@ -87,7 +87,14 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="common_8h.html#a47fdea00b9e91996943afa3ca39c1a4d">   33</a></span><span class="preprocessor">#define SUWIZ_BOARD_INDEX_BOX(box, index) \</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    (((box) / 3) * 27 + ((box) % 3) * 3 + ((index) / 3) * SUWIZ_BOARD_ROW_SIZE + ((index) % 3))</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="common_8h.html#a500f99e17bef6d0b3e796c5e02454715">   39</a></span><span class="preprocessor">#define SUWIZ_BOARD_INDEX_TO_ROW(index) \</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">    ((index) / SUWIZ_BOARD_ROW_SIZE)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="common_8h.html#a5c491870ba8ec0e86f040de365d381a5">   44</a></span><span class="preprocessor">#define SUWIZ_BOARD_INDEX_TO_COLUMN(index) \</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    ((index) % SUWIZ_BOARD_ROW_SIZE)</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="common_8h.html#aa8f06c10dea9ad3d73681692f6d677c6">   49</a></span><span class="preprocessor">#define SUWIZ_BOARD_INDEX_TO_BOX(index) \</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    (((index) / SUWIZ_BOARD_ROW_SIZE) / 3 * 3 + ((index) % SUWIZ_BOARD_ROW_SIZE) / 3)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
