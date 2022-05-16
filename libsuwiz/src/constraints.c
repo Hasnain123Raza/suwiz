@@ -17,7 +17,3 @@ enum SuwizConstraintsStatus suwiz_constraints_status(int16_t *constraints) {
 void suwiz_constraints_solve(int16_t *constraints, int index, int choice) {
 
 }
-
-void suwiz_constraints_unsolve(int16_t *constraints, int index) {
-    
-}

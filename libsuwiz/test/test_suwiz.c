@@ -139,18 +139,21 @@ void test_suwiz_board_create(void) {
     board = suwiz_board_create("123456789000...000a...0");
     CU_ASSERT_PTR_NULL(board);
 
+    board = NULL;
     board = suwiz_board_create(NULL);
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(board[0], INT8_C(0));
     CU_ASSERT_EQUAL(board[80], INT8_C(0));
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(board[0], INT8_C(0));
     CU_ASSERT_EQUAL(board[80], INT8_C(0));
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("123456789");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(board[0], INT8_C(1));
@@ -167,6 +170,7 @@ void test_suwiz_board_create(void) {
     CU_ASSERT_EQUAL(board[80], INT8_C(0));
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("1..2..3..4..5006007008009");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(board[0], INT8_C(1));
@@ -208,24 +212,28 @@ void test_suwiz_board_print(void) {
     char board_str[82] = {0};
     int8_t *board = NULL;
 
+    board = NULL;
     board = suwiz_board_create("");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     suwiz_board_print(board, board_str);
     CU_ASSERT_STRING_EQUAL(board_str, ".................................................................................");
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("123456789");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     suwiz_board_print(board, board_str);
     CU_ASSERT_STRING_EQUAL(board_str, "123456789........................................................................");
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("1..2..3..4..5006007008009");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     suwiz_board_print(board, board_str);
     CU_ASSERT_STRING_EQUAL(board_str, "1..2..3..4..5..6..7..8..9........................................................");
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     suwiz_board_print(board, board_str);
@@ -238,31 +246,37 @@ void test_suwiz_board_status(void) {
 
     CU_ASSERT_EQUAL(suwiz_board_status(NULL), SUWIZ_BOARD_STATUS_INVALID);
 
+    board = NULL;
     board = suwiz_board_create("");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_UNSOLVED);
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("123456789");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_UNSOLVED);
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("1..2..3..4..5006007008009");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_UNSOLVED);
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_UNSOLVED);
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("111");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_INVALID);
     suwiz_board_free(board);
 
+    board = NULL;
     board = suwiz_board_create("712348956389567124456192837138425769264719385975836412897651243523984671641273598");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_SOLVED);
