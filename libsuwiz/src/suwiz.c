@@ -72,7 +72,7 @@ enum SuwizBoardStatus suwiz_board_status(int8_t *board) {
         return SUWIZ_BOARD_STATUS_INVALID;
     }
 
-    char unqiue_value_flags[9][9] = {0};
+    char unique_value_flags[9][9] = {0};
     char board_unsolved = 0;
 
     for (int counter = 0; counter < SUWIZ_BOARD_SIZE; counter++) {
@@ -88,20 +88,20 @@ enum SuwizBoardStatus suwiz_board_status(int8_t *board) {
         int column = SUWIZ_BOARD_INDEX_TO_COLUMN(counter);
         int box = SUWIZ_BOARD_INDEX_TO_BOX(counter);
 
-        if (GET_ROW_FLAG(unqiue_value_flags[row][value_index])) {
+        if (GET_ROW_FLAG(unique_value_flags[row][value_index])) {
             return SUWIZ_BOARD_STATUS_INVALID;
         }
-        SET_ROW_FLAG(unqiue_value_flags[row][value_index]);
+        SET_ROW_FLAG(unique_value_flags[row][value_index]);
 
-        if (GET_COLUMN_FLAG(unqiue_value_flags[column][value_index])) {
+        if (GET_COLUMN_FLAG(unique_value_flags[column][value_index])) {
             return SUWIZ_BOARD_STATUS_INVALID;
         }
-        SET_COLUMN_FLAG(unqiue_value_flags[column][value_index]);
+        SET_COLUMN_FLAG(unique_value_flags[column][value_index]);
 
-        if (GET_BOX_FLAG(unqiue_value_flags[box][value_index])) {
+        if (GET_BOX_FLAG(unique_value_flags[box][value_index])) {
             return SUWIZ_BOARD_STATUS_INVALID;
         }
-        SET_BOX_FLAG(unqiue_value_flags[box][value_index]);
+        SET_BOX_FLAG(unique_value_flags[box][value_index]);
     }
 
     if (board_unsolved) {

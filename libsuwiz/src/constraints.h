@@ -9,6 +9,9 @@
  * @file solve.h
  * @brief The header for constraints board data structure.
  * 
+ * @details Functions are not guaranteed to be robust so use with caution (make sure
+ * the arguments are valid).
+ * 
  * @author Hasnain Raza 
  */
 
@@ -21,13 +24,14 @@
 #define SUWIZ_CONSTRAINTS_CHOICE_SEVEN INT16_C(0b10000000000) /**< Choice for the value seven. */
 #define SUWIZ_CONSTRAINTS_CHOICE_EIGHT INT16_C(0b100000000000) /**< Choice for the value eight. */
 #define SUWIZ_CONSTRAINTS_CHOICE_NINE INT16_C(0b1000000000000) /**< Choice for the value nine. */
-#define SUWIZ_CONSTRAINTS_CHOICE_ALL INT16_C(0b111111111111) /**< Choice for all values. */
+#define SUWIZ_CONSTRAINTS_CHOICE_ALL INT16_C(0b1111111110000) /**< Choice for all values. */
 #define SUWIZ_CONSTRAINTS_CHOICE_NONE INT16_C(0b0) /**< Choice for no values. */
 
 #define SUWIZ_CONSTRAINTS_IS_VALUE(cell) ((cell) & INT16_C(0b1111)) /**< Checks if the cell is a value. */
 #define SUWIZ_CONSTRAINTS_ADD_CHOICE(cell, choice) ((cell) | (choice)) /**< Adds a choice to the cell. */
 #define SUWIZ_CONSTRAINTS_REMOVE_CHOICE(cell, choice) ((cell) & ~(choice)) /**< Removes a choice from the cell. */
-#define SUWIZ_CONSTRAINTS_HAS_CHOICE(cell, choice) ((cell) & (choice)) /**< Checks if the cell has the choice. */
+#define SUWIZ_CONSTRAINTS_HAS_CHOICE(cell, choice) (((cell) & (choice)) == (choice)) /**< Checks if the cell has the choice. */
+#define SUWIZ_CONSTRAINTS_INT_TO_CHOICE(value) (INT16_C(1) << (value + 3)) /**< Converts an integer to a choice. */
 
 /**
  * @brief The status of a constraints board.
@@ -58,7 +62,6 @@ void suwiz_constraints_free(int16_t *constraints);
  * - SUWIZ_CONSTRAINTS_STATUS_INVALID: The constraints board is invalid.
  * - SUWIZ_CONSTRAINTS_STATUS_SOLVED: The constraints board is solved.
  * - SUWIZ_CONSTRAINTS_STATUS_UNSOLVED: The constraints board is unsolved.
- * - SUWIZ_CONSTRAINTS_STATUS_UNSOLVABLE: The constraints board is unsolvable.
  * 
  * @param constraints The constraints board.
  * @return enum SuwizConstraintsStatus The status of the constraints board.

@@ -277,6 +277,18 @@ void test_suwiz_board_status(void) {
     suwiz_board_free(board);
 
     board = NULL;
+    board = suwiz_board_create("3.542.81.4879.15.6.29.5637485.793.416132.8957.74.6528.2413.9.655.867.192.965124.8");
+    CU_ASSERT_PTR_NOT_NULL_FATAL(board);
+    CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_UNSOLVED);
+    suwiz_board_free(board);
+
+    board = NULL;
+    board = suwiz_board_create("..2.3...8.....8....31.2.....6..5.27..1.....5.2.4.6..31....8.6.5.......13..531.4..");
+    CU_ASSERT_PTR_NOT_NULL_FATAL(board);
+    CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_UNSOLVED);
+    suwiz_board_free(board);
+
+    board = NULL;
     board = suwiz_board_create("712348956389567124456192837138425769264719385975836412897651243523984671641273598");
     CU_ASSERT_PTR_NOT_NULL_FATAL(board);
     CU_ASSERT_EQUAL(suwiz_board_status(board), SUWIZ_BOARD_STATUS_SOLVED);
