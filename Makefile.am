@@ -16,7 +16,7 @@ libsuwiz_a_CPPFLAGS = \
 bin_PROGRAMS = suwiz
 suwiz_SOURCES = \
     suwiz-cli/src/main.c \
-    suwiz-cli/src/common.h \
+    suwiz-cli/src/app.h \
     suwiz-cli/src/argp.h \
     suwiz-cli/src/argp.c
 suwiz_CPPFLAGS = \
@@ -30,7 +30,9 @@ test_driver_SOURCES = \
     libsuwiz/test/test_suwiz.h \
     libsuwiz/test/test_suwiz.c \
     libsuwiz/test/test_constraints.h \
-    libsuwiz/test/test_constraints.c
+    libsuwiz/test/test_constraints.c \
+    libsuwiz/test/test_solve.h \
+    libsuwiz/test/test_solve.c
 test_driver_CPPFLAGS = \
     -I$(top_srcdir)/libsuwiz/include \
     -I$(top_srcdir)/libsuwiz/src \
