@@ -2,6 +2,7 @@
 #include <BCUnit/BCUnit.h>
 #include <BCUnit/Basic.h>
 #include "test_constraints.h"
+#include "test_convert.h"
 #include "test_solve.h"
 #include "test_suwiz.h"
 
@@ -17,6 +18,7 @@ int main(void) {
 
     if ((prepare_suite_suwiz() != CUE_SUCCESS) ||
         (prepare_suite_constraints() != CUE_SUCCESS) ||
+        (prepare_suite_convert() != CUE_SUCCESS) ||
         (prepare_suite_solve() != CUE_SUCCESS)) {
         return CU_get_error();
     }

@@ -69,7 +69,7 @@ void suwiz_board_print(int8_t *board, char *board_str);
  */
 enum SuwizBoardStatus suwiz_board_status(int8_t *board);
 /**
- * @brief Solves the sudoku board.
+ * @brief Solves the sudoku board using a recursive approach.
  * 
  * @details The returned solutions are stored in an array that needs to be freed
  * by the caller along with the individual solutions. The solutions are completed
@@ -80,6 +80,6 @@ enum SuwizBoardStatus suwiz_board_status(int8_t *board);
  * @param solutions_found The number of solutions found.
  * @return int8_t** The solutions found.
  */
-int8_t **suwiz_board_solve(int8_t *board, int max_solutions, int *solutions_found);
+int8_t **suwiz_board_solve_recursive(int8_t *board, int max_solutions, int *solutions_found);
 
 #endif

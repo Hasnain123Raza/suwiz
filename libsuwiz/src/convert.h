@@ -1,5 +1,5 @@
-#ifndef SOLVE_H
-#define SOLVE_H
+#ifndef CONVERT_H
+#define CONVERT_H
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -8,8 +8,8 @@
 #include "suwiz.h"
 
 /**
- * @file solve.h
- * @brief The header for solving the sudoku.
+ * @file convert.h
+ * @brief The header for converting between sudoku boards and constraints.
  * 
  * @author Hasnain Raza 
  */

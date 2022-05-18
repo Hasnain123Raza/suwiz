@@ -5,10 +5,11 @@ include_HEADERS = \
 lib_LIBRARIES = libsuwiz.a
 libsuwiz_a_SOURCES = \
     libsuwiz/src/suwiz.c \
-    libsuwiz/src/solve.h \
-    libsuwiz/src/solve.c \
+    libsuwiz/src/convert.h \
+    libsuwiz/src/convert.c \
     libsuwiz/src/constraints.h \
-    libsuwiz/src/constraints.c
+    libsuwiz/src/constraints.c \
+    libsuwiz/src/solve_recursive.c
 libsuwiz_a_CPPFLAGS = \
     -I$(top_srcdir)/libsuwiz/include \
     -I$(top_srcdir)/libsuwiz/src
@@ -31,6 +32,8 @@ test_driver_SOURCES = \
     libsuwiz/test/test_suwiz.c \
     libsuwiz/test/test_constraints.h \
     libsuwiz/test/test_constraints.c \
+    libsuwiz/test/test_convert.h \
+    libsuwiz/test/test_convert.c \
     libsuwiz/test/test_solve.h \
     libsuwiz/test/test_solve.c
 test_driver_CPPFLAGS = \
