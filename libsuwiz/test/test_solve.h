@@ -2,6 +2,8 @@
 #define TEST_SOLVE_H
 
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 #include <BCUnit/BCUnit.h>
 #include <BCUnit/Basic.h>
 #include <suwiz.h>

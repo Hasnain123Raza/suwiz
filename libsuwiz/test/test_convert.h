@@ -2,6 +2,7 @@
 #define TEST_CONVERT_H
 
 #include <stdint.h>
+#include <stdlib.h>
 #include <BCUnit/BCUnit.h>
 #include <BCUnit/Basic.h>
 #include "convert.h"

@@ -76,7 +76,8 @@ enum SuwizBoardStatus suwiz_board_status(int8_t *board);
  * sudoku boards.
  * 
  * @param board The sudoku board to be solved.
- * @param max_solutions The maximum number of solutions to be returned.
+ * @param max_solutions The maximum number of solutions to be returned, or 0 to
+ * solve until all solutions are found.
  * @param solutions_found The number of solutions found.
  * @return int8_t** The solutions found.
  */
