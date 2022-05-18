@@ -106,9 +106,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a09368b730a6fb57fa0fe8d5d2774f7cb"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="suwiz_8h.html#a2983cafa064041245ede4ad9ce32d567">SuwizBoardStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#a09368b730a6fb57fa0fe8d5d2774f7cb">suwiz_board_status</a> (int8_t *board)</td></tr>
 <tr class="memdesc:a09368b730a6fb57fa0fe8d5d2774f7cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the status of the sudoku board.  <a href="suwiz_8h.html#a09368b730a6fb57fa0fe8d5d2774f7cb">More...</a><br /></td></tr>
 <tr class="separator:a09368b730a6fb57fa0fe8d5d2774f7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af7b362067282a52564d9fd6fc26c67"><td class="memItemLeft" align="right" valign="top">int8_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#a8af7b362067282a52564d9fd6fc26c67">suwiz_board_solve</a> (int8_t *board, int max_solutions, int *solutions_found)</td></tr>
-<tr class="memdesc:a8af7b362067282a52564d9fd6fc26c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the sudoku board.  <a href="suwiz_8h.html#a8af7b362067282a52564d9fd6fc26c67">More...</a><br /></td></tr>
-<tr class="separator:a8af7b362067282a52564d9fd6fc26c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae3633efab528d7e0a7c911329ab41b"><td class="memItemLeft" align="right" valign="top">int8_t **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="suwiz_8h.html#a0ae3633efab528d7e0a7c911329ab41b">suwiz_board_solve_recursive</a> (int8_t *board, int max_solutions, int *solutions_found)</td></tr>
+<tr class="memdesc:a0ae3633efab528d7e0a7c911329ab41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the sudoku board using a recursive approach.  <a href="suwiz_8h.html#a0ae3633efab528d7e0a7c911329ab41b">More...</a><br /></td></tr>
+<tr class="separator:a0ae3633efab528d7e0a7c911329ab41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The main header file for suwiz library. </p>
@@ -231,14 +231,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8af7b362067282a52564d9fd6fc26c67" name="a8af7b362067282a52564d9fd6fc26c67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8af7b362067282a52564d9fd6fc26c67">&#9670;&nbsp;</a></span>suwiz_board_solve()</h2>
+<a id="a0ae3633efab528d7e0a7c911329ab41b" name="a0ae3633efab528d7e0a7c911329ab41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae3633efab528d7e0a7c911329ab41b">&#9670;&nbsp;</a></span>suwiz_board_solve_recursive()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t ** suwiz_board_solve </td>
+          <td class="memname">int8_t ** suwiz_board_solve_recursive </td>
           <td>(</td>
           <td class="paramtype">int8_t *&#160;</td>
           <td class="paramname"><em>board</em>, </td>
@@ -263,7 +263,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Solves the sudoku board. </p>
+<p>Solves the sudoku board using a recursive approach. </p>
 <p >The returned solutions are stored in an array that needs to be freed by the caller along with the individual solutions. The solutions are completed sudoku boards.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

@@ -18,7 +18,7 @@ var searchData=
   ['suwiz_5fboard_5frow_5fsize_15',['SUWIZ_BOARD_ROW_SIZE',['../common_8h.html#a28d766248bd257e453731165566e9aa7',1,'common.h']]],
   ['suwiz_5fboard_5frows_16',['SUWIZ_BOARD_ROWS',['../common_8h.html#a464814832880b3dce54340e2f2c30533',1,'common.h']]],
   ['suwiz_5fboard_5fsize_17',['SUWIZ_BOARD_SIZE',['../common_8h.html#a68fa26d66f9fa1810c3f3e53041bf3ff',1,'common.h']]],
-  ['suwiz_5fboard_5fsolve_18',['suwiz_board_solve',['../suwiz_8h.html#a8af7b362067282a52564d9fd6fc26c67',1,'suwiz.h']]],
+  ['suwiz_5fboard_5fsolve_5frecursive_18',['suwiz_board_solve_recursive',['../suwiz_8h.html#a0ae3633efab528d7e0a7c911329ab41b',1,'suwiz.h']]],
   ['suwiz_5fboard_5fstatus_19',['suwiz_board_status',['../suwiz_8h.html#a09368b730a6fb57fa0fe8d5d2774f7cb',1,'suwiz.h']]],
   ['suwiz_5fboard_5fstatus_5finvalid_20',['SUWIZ_BOARD_STATUS_INVALID',['../suwiz_8h.html#a2983cafa064041245ede4ad9ce32d567a86e5ca4eb1c2c5eda489315a0a1a1aad',1,'suwiz.h']]],
   ['suwiz_5fboard_5fstatus_5fsolved_21',['SUWIZ_BOARD_STATUS_SOLVED',['../suwiz_8h.html#a2983cafa064041245ede4ad9ce32d567a1d299469c4a456a7ffd17a82419381d5',1,'suwiz.h']]],
