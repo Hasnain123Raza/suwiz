@@ -13,6 +13,21 @@ int16_t *suwiz_constraints_create() {
     return constraints;
 }
 
+int16_t *suwiz_constraints_clone(int16_t *constraints) {
+    if (constraints == NULL) {
+        return NULL;
+    }
+
+    int16_t *new_constraints = (int16_t *)malloc(sizeof(int16_t) * SUWIZ_BOARD_SIZE);
+    if (new_constraints == NULL) {
+        return NULL;
+    }
+
+    memcpy(new_constraints, constraints, sizeof(int16_t) * SUWIZ_BOARD_SIZE);
+
+    return new_constraints;
+}
+
 void suwiz_constraints_free(int16_t *constraints) {
     if (constraints != NULL) {
         free(constraints);

@@ -16,6 +16,7 @@ void test_suwiz_constraints_add_choice(void);
 void test_suwiz_constraints_remove_choice(void);
 void test_suwiz_constraints_has_choice(void);
 void test_suwiz_constraints_create(void);
+void test_suwiz_constraints_clone(void);
 void test_suwiz_constraints_free(void);
 void test_suwiz_constraints_status(void);
 void test_suwiz_constraints_solve(void);

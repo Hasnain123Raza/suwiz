@@ -19,6 +19,7 @@ CU_ErrorCode prepare_suite_constraints(void) {
         (CU_add_test(suite_constraints, "suwiz_constraints_remove_choice", test_suwiz_constraints_remove_choice) == NULL) ||
         (CU_add_test(suite_constraints, "suwiz_constraints_has_choice", test_suwiz_constraints_has_choice) == NULL) ||
         (CU_add_test(suite_constraints, "suwiz_constraints_create", test_suwiz_constraints_create) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_clone", test_suwiz_constraints_clone) == NULL) ||
         (CU_add_test(suite_constraints, "suwiz_constraints_free", test_suwiz_constraints_free) == NULL) ||
         (CU_add_test(suite_constraints, "suwiz_constraints_status", test_suwiz_constraints_status) == NULL) ||
         (CU_add_test(suite_constraints, "suwiz_constraints_solve", test_suwiz_constraints_solve) == NULL)) {
@@ -72,6 +73,10 @@ void test_suwiz_constraints_create(void) {
     CU_ASSERT_EQUAL(constraints[0], SUWIZ_CONSTRAINTS_CHOICE_ALL);
     CU_ASSERT_EQUAL(constraints[80], SUWIZ_CONSTRAINTS_CHOICE_ALL);
     suwiz_constraints_free(constraints);
+}
+
+void test_suwiz_constraints_clone(void) {
+
 }
 
 void test_suwiz_constraints_free(void) {

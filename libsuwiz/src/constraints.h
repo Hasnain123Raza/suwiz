@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
 #include "common.h"
 
 /**
@@ -32,6 +33,8 @@
 #define SUWIZ_CONSTRAINTS_REMOVE_CHOICE(cell, choice) ((cell) & ~(choice)) /**< Removes a choice from the cell. */
 #define SUWIZ_CONSTRAINTS_HAS_CHOICE(cell, choice) (((cell) & (choice)) == (choice)) /**< Checks if the cell has the choice. */
 #define SUWIZ_CONSTRAINTS_INT_TO_CHOICE(value) (INT16_C(1) << (value + 3)) /**< Converts an integer to a choice. */
+#define SUWIZ_CONSTRAINTS_COUNT_CHOICES(cell) (__builtin_popcount(cell)) /**< Counts the number of choices in the cell. */
+#define SUWIZ_CONSTRAINTS_LOWEST_CHOICE(cell) (1 << __builtin_ctz(cell)) /**< Gets the lowest choice in the cell. */
 
 /**
  * @brief The status of a constraints board.
@@ -48,6 +51,13 @@ enum SuwizConstraintsStatus {
  * @return int16_t* The new constraints board.
  */
 int16_t *suwiz_constraints_create();
+/**
+ * @brief Clones a constraints board.
+ * 
+ * @param constraints The constraints board to clone.
+ * @return int16_t* The new constraints board.
+ */
+int16_t *suwiz_constraints_clone(int16_t *constraints);
 /**
  * @brief Frees the memory allocated for the constraints board.
  * 
