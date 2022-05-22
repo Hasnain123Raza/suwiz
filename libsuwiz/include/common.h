@@ -16,6 +16,7 @@
 #define SUWIZ_BOARD_COLUMN_SIZE 9 /**< The number of cells in a column of a sudoku board. */
 #define SUWIZ_BOARD_BOX_SIZE 9 /**< The number of cells in a box of a sudoku board. */
 #define SUWIZ_BOARD_SIZE 81 /**< The number of cells in a sudoku board. */
+#define SUWIZ_BOARD_CHOICES 9 /**< The number of choices in a sudoku board. */
 
 /**
  * @brief Gets the index of a cell by an index into a row.

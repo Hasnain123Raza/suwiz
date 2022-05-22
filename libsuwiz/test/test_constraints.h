@@ -20,6 +20,6 @@ void test_suwiz_constraints_clone(void);
 void test_suwiz_constraints_free(void);
 void test_suwiz_constraints_status(void);
 void test_suwiz_constraints_solve(void);
-void test_suwiz_constraints_unsolve(void);
+void test_suwiz_constraints_solve_singles(void);
 
 #endif

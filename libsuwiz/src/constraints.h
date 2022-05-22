@@ -33,7 +33,7 @@
 #define SUWIZ_CONSTRAINTS_REMOVE_CHOICE(cell, choice) ((cell) & ~(choice)) /**< Removes a choice from the cell. */
 #define SUWIZ_CONSTRAINTS_HAS_CHOICE(cell, choice) (((cell) & (choice)) == (choice)) /**< Checks if the cell has the choice. */
 #define SUWIZ_CONSTRAINTS_INT_TO_CHOICE(value) (INT16_C(1) << (value + 3)) /**< Converts an integer to a choice. */
-#define SUWIZ_CONSTRAINTS_COUNT_CHOICES(cell) (__builtin_popcount(cell)) /**< Counts the number of choices in the cell. */
+#define SUWIZ_CONSTRAINTS_CHOICE_COUNT(cell) (__builtin_popcount(cell)) /**< Counts the number of choices in the cell. */
 #define SUWIZ_CONSTRAINTS_LOWEST_CHOICE(cell) (1 << __builtin_ctz(cell)) /**< Gets the lowest choice in the cell. */
 
 /**
@@ -89,6 +89,19 @@ enum SuwizConstraintsStatus suwiz_constraints_status(int16_t *constraints);
  * @param index The index into the board.
  * @param choice The choice to be solved.
  */
-void suwiz_constraints_solve(int16_t *constraints, int index, int choice);
+void suwiz_constraints_solve(int16_t *constraints, int index, int16_t choice);
+/**
+ * @brief Solves all the single choice constraints in the constraints board.
+ * 
+ * @details The single choice constraints are the constraints where the cell
+ * has only one choice. After a single choice constraints is solve, the
+ * function will start at the beginning again to solve any new single choice
+ * constraints. Constraints board is not guaranteed to be valid after this
+ * function is called.
+ * 
+ * @param constraints The constraints board.
+ * @return int 1 if board becomes invalid, 0 otherwise.
+ */
+int suwiz_constraints_solve_singles(int16_t *constraints);
 
 #endif

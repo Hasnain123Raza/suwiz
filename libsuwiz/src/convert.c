@@ -20,7 +20,7 @@ int16_t *suwiz_board_to_constraints(int8_t *board) {
 
     for (int counter = 0; counter < SUWIZ_BOARD_SIZE; counter++) {
         if (board[counter] != 0) {
-            suwiz_constraints_solve(constraints, counter, board[counter]);
+            suwiz_constraints_solve(constraints, counter, SUWIZ_CONSTRAINTS_INT_TO_CHOICE(board[counter]));
         }
     }
 

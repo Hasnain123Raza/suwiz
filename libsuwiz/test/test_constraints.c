@@ -22,7 +22,8 @@ CU_ErrorCode prepare_suite_constraints(void) {
         (CU_add_test(suite_constraints, "suwiz_constraints_clone", test_suwiz_constraints_clone) == NULL) ||
         (CU_add_test(suite_constraints, "suwiz_constraints_free", test_suwiz_constraints_free) == NULL) ||
         (CU_add_test(suite_constraints, "suwiz_constraints_status", test_suwiz_constraints_status) == NULL) ||
-        (CU_add_test(suite_constraints, "suwiz_constraints_solve", test_suwiz_constraints_solve) == NULL)) {
+        (CU_add_test(suite_constraints, "suwiz_constraints_solve", test_suwiz_constraints_solve) == NULL) ||
+        (CU_add_test(suite_constraints, "suwiz_constraints_solve_singles", test_suwiz_constraints_solve_singles) == NULL)) {
         return CU_get_error();
     }
 
@@ -254,7 +255,7 @@ void test_suwiz_constraints_solve(void) {
     constraints = NULL;
     constraints = suwiz_constraints_create();
     CU_ASSERT_PTR_NOT_NULL_FATAL(constraints);
-    suwiz_constraints_solve(constraints, 0, 1);
+    suwiz_constraints_solve(constraints, 0, SUWIZ_CONSTRAINTS_CHOICE_ONE);
     CU_ASSERT_EQUAL(constraints[0], INT16_C(1));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[1], choice_23456789));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[8], choice_23456789));
@@ -267,7 +268,7 @@ void test_suwiz_constraints_solve(void) {
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[28], SUWIZ_CONSTRAINTS_CHOICE_ALL));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[73], SUWIZ_CONSTRAINTS_CHOICE_ALL));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[30], SUWIZ_CONSTRAINTS_CHOICE_ALL));
-    suwiz_constraints_solve(constraints, 1, 2);
+    suwiz_constraints_solve(constraints, 1, SUWIZ_CONSTRAINTS_CHOICE_TWO);
     CU_ASSERT_EQUAL(constraints[0], INT16_C(1));
     CU_ASSERT_EQUAL(constraints[1], INT16_C(2));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[2], choice_3456789));
@@ -285,7 +286,7 @@ void test_suwiz_constraints_solve(void) {
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[30], SUWIZ_CONSTRAINTS_CHOICE_ALL));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[29], SUWIZ_CONSTRAINTS_CHOICE_ALL));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[74], SUWIZ_CONSTRAINTS_CHOICE_ALL));
-    suwiz_constraints_solve(constraints, 70, 3);
+    suwiz_constraints_solve(constraints, 70, SUWIZ_CONSTRAINTS_CHOICE_THREE);
     CU_ASSERT_EQUAL(constraints[0], INT16_C(1));
     CU_ASSERT_EQUAL(constraints[1], INT16_C(2));
     CU_ASSERT_EQUAL(constraints[70], INT16_C(3));
@@ -328,4 +329,8 @@ void test_suwiz_constraints_solve(void) {
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[51], SUWIZ_CONSTRAINTS_CHOICE_ALL));
     CU_ASSERT_TRUE(SUWIZ_CONSTRAINTS_HAS_CHOICE(constraints[53], SUWIZ_CONSTRAINTS_CHOICE_ALL));
     suwiz_constraints_free(constraints);
+}
+
+void test_suwiz_constraints_solve_singles(void) {
+
 }
